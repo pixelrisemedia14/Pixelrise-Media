@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-display: 'Syne', system-ui, -apple-system, sans-serif;
+    --font-serif-accent: 'Instrument Serif', Georgia, serif;
+    --color-bg-deep: #050505;
+    --color-bg-card: #0d0d0d;
+    --color-accent: #F27D26;
+    --color-accent-hover: #ff913d;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #050505;
+    color: #EDEDED;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-serif-accent {
+    font-family: var(--font-serif-accent);
+  }
+}
+
+/* Custom subtle dark noise / grid / dot backgrounds */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-size: 28px 28px;
+  background-image: radial-gradient(rgba(242, 125, 38, 0.12) 1px, transparent 1px);
+}
+
+.bg-dark-radial {
+  background: radial-gradient(circle at 50% 0%, rgba(242, 125, 38, 0.08) 0%, rgba(5, 5, 5, 0) 70%);
+}
+
+/* Custom sleek scrollbar for Sophisticated Dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F27D26;
+}
